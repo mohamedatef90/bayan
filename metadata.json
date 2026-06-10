@@ -1,0 +1,6 @@
+{
+  "name": "Bayan",
+  "description": "Bayan is a digital Islamic library and community peer-review portal dedicated to preserving and exploring authentic Islamic heritage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

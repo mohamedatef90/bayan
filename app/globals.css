@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-900: #08396D;
+  --color-ink-700: #0B4A8B;
+  --color-ink-500: #2E6DB4;
+  --color-gold-700: #A07A38;
+  --color-gold-500: #C7A05A;
+  --color-gold-300: #D9B879;
+  --color-maroon-700: #6E2A30;
+  --color-maroon-500: #8A3A40;
+  --color-paper: #FAF8F3;
+  --color-paper-2: #F1ECE3;
+  --color-slate: #5F6670;
+  --color-char: #1F2937;
+  --color-night: #062A52;
+  
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-ar: var(--font-ar);
+  --font-ar-read: var(--font-ar-read);
+  --font-mono: var(--font-mono);
+}
+
+:root {
+  --ink-900: #08396D;
+  --paper: #FAF8F3;
+  --char: #1F2937;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--char);
+  font-family: var(--font-sans);
+}
+
+.geo-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image:
+    linear-gradient(45deg, var(--ink-900) 1px, transparent 1px),
+    linear-gradient(-45deg, var(--ink-900) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+/* Custom fade-in and smooth animation styles */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
